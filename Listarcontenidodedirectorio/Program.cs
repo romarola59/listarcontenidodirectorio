@@ -1,12 +1,18 @@
 ﻿using System;
+using System.IO;
 
 namespace Listarcontenidodedirectorio
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.WriteLine("Hello World!");
+            string miDirectorio = @"c:\";
+            string[] listaFicheros;
+            listaFicheros = Directory.GetFiles(miDirectorio);
+            foreach(String fichero in listaFicheros)
+            Console.WriteLine(fichero);
+            Console.ReadKey();
         }
     }
 }
